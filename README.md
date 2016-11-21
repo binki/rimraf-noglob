@@ -41,3 +41,10 @@ will perform shell expansion based on
 want to be safe, either be certain that you’re using an Operating
 System that has POSIX-style processes or invoke the function via
 JavaScript directly.
+
+# Version
+
+For simplicity, this package’s MAJOR.MINOR will reflect the
+MAJOR.MINOR of the version of `rimraf` it depends on and is tested
+against. Please open an issue if a new version is missing or a
+backport is necessary.
