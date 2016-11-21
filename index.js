@@ -3,9 +3,14 @@
 var rimrafGlob = require('rimraf')
 
 function fixOpts(opts) {
-  return Object.assign({
+  // Support node-0:
+  var result = {
     glob: false,
-  }, opts)
+  }
+  for (var i in opts) {
+    result[i] = opts[i]
+  }
+  return result
 }
 
 module.exports = function (f, opts, callback) {
