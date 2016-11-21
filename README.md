@@ -32,15 +32,45 @@ except that `opts.glob` defaults to `false`.
 
 # CLI
 
-It probably never makes sense to invoke this from the command
-line. But it will be available as `rimraf-noglob <path> [<path>
-…]`. Note that your shell may perform glob expansion for you unless
-if you are using Windows, in which case [the libc of the `exec()`d
-node process will perform shell expansion based on
+This command will be available as `rimraf-noglob <path> [<path>
+…]`. It will handle parameter expansion similarly to your favorite
+CLI utility. Note that your shell may perform glob expansion for you
+unless if you are using Windows, in which case [the libc of the
+`exec()`d node process will perform shell expansion based on
 `CommandLine`.](http://stackoverflow.com/a/4094897/429091). If you
 want to be safe, either be certain that you’re using an Operating
 System that has POSIX-style processes or invoke the function via
 JavaScript directly.
+
+In my opinion, `rimraf-noglob` has less surprising behavior than
+`rimraf`:
+
+    $ touch test\* test1 test2
+    $ rimraf test\*
+    $ ls | grep -e test
+    test1
+    test2
+    $ rimraf test\*
+    $ ls | grep -e test
+    $
+
+What? It removed the exact match the first time but did glob expansion
+the second time?
+
+    $ touch test\* test1 test2
+    $ rimraf-noglob test\*
+    $ ls | grep -e test
+    test1
+    test2
+    $ rimraf-noglob test\*
+    $ ls | grep -e test
+    test1
+    test2
+    $
+
+`rimraf-noglob`, especially in a POSIX shell, unconditionally exhibits
+the behavior expected of CLI programs. It lets the shell (or, on
+Windows, libc) handle globbing for normal arguments.
 
 # Version
 
