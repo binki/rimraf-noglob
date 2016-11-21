@@ -23,13 +23,12 @@ A wrapper, `rimraf-noglob`:
 ## `rimraf(f, [opts], callback)`
 
 Same as [`rimraf()`](https://github.com/isaacs/rimraf#api) except that
-options `glob` defaults to `false` instead of `true`.
+`opts.glob` defaults to `false`.
 
 ## `rimraf.sync(f, [opts])`
 
 Same as [`rimraf.sync()`](https://github.com/isaacs/rimraf#rimrafsync)
-except that optoins `glob` and `disableGlob` are ignored and globbing
-is always disabled.
+except that `opts.glob` defaults to `false`.
 
 # CLI
 
@@ -38,7 +37,7 @@ line. But it will be available as `rimraf <path> [<path> …]`. Note
 that your shell may perform glob expansion for you unless if you are
 using Windows, in which case [the libc of the `exec()`d node process
 will perform shell expansion based on
-CommandLine.](http://stackoverflow.com/a/4094897/429091). If you want
-to be safe, either be certain that you’re using an Operating System
-that has POSIX-style processes or invoke the function via JavaScript
-directly.
+`CommandLine`.](http://stackoverflow.com/a/4094897/429091). If you
+want to be safe, either be certain that you’re using an Operating
+System that has POSIX-style processes or invoke the function via
+JavaScript directly.
