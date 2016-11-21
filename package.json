@@ -1,6 +1,6 @@
 {
   "name": "rimraf-noglob",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "rimraf wrapper with globbing disabled by default",
   "main": "index.js",
   "bin": {
