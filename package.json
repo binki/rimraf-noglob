@@ -1,0 +1,28 @@
+{
+  "name": "rimraf-noglob",
+  "version": "1.0.0",
+  "description": "rimraf without glob support",
+  "main": "index.js",
+  "bin": {
+    "rimraf-noglob": "bin/rimraf-noglob"
+  },
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binki/rimraf-noglob.git"
+  },
+  "author": "Nathan Phillip Brink <ohnobinki@ohnopublishing.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binki/rimraf-noglob/issues"
+  },
+  "homepage": "https://github.com/binki/rimraf-noglob#readme",
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  },
+  "dependencies": {
+    "rimraf": "^2.5.4"
+  }
+}
