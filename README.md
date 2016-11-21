@@ -37,7 +37,7 @@ This command will be available as `rimraf-noglob <path> [<path>
 CLI utility. Note that your shell may perform glob expansion for you
 unless if you are using Windows, in which case [the libc of the
 `exec()`d node process will perform shell expansion based on
-`CommandLine`.](http://stackoverflow.com/a/4094897/429091). If you
+`CommandLine`](http://stackoverflow.com/a/4094897/429091). If you
 want to be safe, either be certain that you’re using an Operating
 System that has POSIX-style processes or invoke the function via
 JavaScript directly.
