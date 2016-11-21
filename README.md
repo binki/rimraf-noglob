@@ -46,7 +46,7 @@ JavaScript directly.
 
 For simplicity, this package’s MAJOR.MINOR will reflect the
 MAJOR.MINOR of the version of `rimraf` it depends on and is tested
-against. However, if changes to this projects API are necessary,
+against. However, if changes to this project’s API are necessary,
 exceptions may have to be made in the future. Those will be documented
 here if that is ever the case.
 
