@@ -6,7 +6,7 @@ Vanilla `rimraf`:
     
     rimraf(untrustedPath, { glob: false, });
     rimraf('/path/to/file?', { glob: false, });
-    // Passing a trusted string and relying on cwd
+    // Passing a trusted string and relying on cwd.
     rimraf('tmp/*.o');
 
 A wrapper, `rimraf-noglob`:
