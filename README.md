@@ -46,5 +46,9 @@ JavaScript directly.
 
 For simplicity, this package’s MAJOR.MINOR will reflect the
 MAJOR.MINOR of the version of `rimraf` it depends on and is tested
-against. Please open an issue if a new version is missing or a
+against. However, if changes to this projects API are necessary,
+exceptions may have to be made in the future. Those will be documented
+here if that is ever the case.
+
+Please open an issue if a new version of `rimraf` is missing or a
 backport is necessary.

@@ -1,6 +1,6 @@
 {
   "name": "rimraf-noglob",
-  "version": "1.0.0",
+  "version": "2.5.0",
   "description": "rimraf without glob support",
   "main": "index.js",
   "bin": {
